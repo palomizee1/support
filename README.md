@@ -1,28 +1,27 @@
-# Support
+# Support — Finora Budget · Vitals Flow · Smart Utility Hub
 
-Apps by **[Developer name]** — Finora Budget · Vitals Flow · Smart Utility Hub.
+**Live page: https://palomizee1.github.io/support/**
 
-## Contact
-Questions, bug reports, or feature ideas: **[contact email]**
+Available in English, Español, Deutsch, Français and Português (Brasil) via the language
+selector, and linkable per language:
 
-Please include the app name, your iOS version, and what you were doing when the
-issue happened. Screenshots help a lot.
+| Locale | URL |
+|---|---|
+| English | https://palomizee1.github.io/support/?lang=en |
+| Español | https://palomizee1.github.io/support/?lang=es |
+| Deutsch | https://palomizee1.github.io/support/?lang=de |
+| Français | https://palomizee1.github.io/support/?lang=fr |
+| Português (BR) | https://palomizee1.github.io/support/?lang=pt-BR |
 
-## Common questions
+## Editing
 
-**Where is my data stored?**
-On your device. There are no accounts and no developer servers. Vitals Flow can
-optionally sync through your own iCloud. See the
-[Privacy Policy](https://github.com/palomizee1/privacy).
+`index.html` is **generated** — don't hand-edit it. The source is the `SUPPORT*.md` files in
+the PersonalSuite repository:
 
-**How do I back up my data?**
-Each app has Settings → Backup, which exports a file you own. Restore it from the
-same screen on any device.
+```
+python3 Scripts/build_pages.py support <path-to-this-repo>
+```
 
-**How do the AI features work?**
-They're optional and use your own OpenAI or Anthropic API key (added in Settings).
-No key, no data leaves your device.
-
-**How do I restore a Pro purchase?**
-Settings → the Pro/Unlock row → Restore Purchases, signed in with the Apple
-Account that bought it. Pro is a one-time purchase with Family Sharing enabled.
+The build redacts the contact email to `[contact email]` and refuses to write a file that
+still contains it — this repo is public and its history is permanent, so that field is filled
+in on the live page by hand.

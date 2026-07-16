@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support</title>
+<meta name="color-scheme" content="light dark">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1c1c1e; --muted: #6b6b70; --rule: #e3e3e8;
+    --accent: #f59e0b; --chip: #f2f2f7; --chip-fg: #3a3a3c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000; --fg: #f2f2f7; --muted: #9a9aa0; --rule: #2c2c2e;
+      --accent: #f5a623; --chip: #1c1c1e; --chip-fg: #d1d1d6;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 2rem 1.25rem 4rem;
+    background: var(--bg); color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 1.25rem; letter-spacing: -0.01em; }
+  h2 { font-size: 1.2rem; margin: 2rem 0 .6rem; letter-spacing: -0.01em; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+  li { margin: .35rem 0; }
+  li > ul { margin: .35rem 0 .5rem; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; word-break: break-word; }
+  strong { font-weight: 650; }
+  nav {
+    display: flex; flex-wrap: wrap; gap: .5rem;
+    margin: 0 0 2rem; padding: 0 0 1.25rem; border-bottom: 1px solid var(--rule);
+  }
+  nav button {
+    font: inherit; font-size: .9rem; cursor: pointer;
+    padding: .4rem .85rem; border-radius: 999px;
+    border: 1px solid transparent; background: var(--chip); color: var(--chip-fg);
+  }
+  nav button:hover { border-color: var(--rule); }
+  nav button[aria-current="true"] { background: var(--accent); color: #1c1c1e; font-weight: 600; }
+  /* No JS: English still renders. JS reveals the rest. */
+  section[hidden] { display: none; }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule);
+            color: var(--muted); font-size: .85rem; }
+</style>
+</head>
+<body>
+<main>
+  <nav aria-label="Language">
+    <button id="btn-en" type="button" lang="en">English</button>
+    <button id="btn-es" type="button" lang="es">Español</button>
+    <button id="btn-de" type="button" lang="de">Deutsch</button>
+    <button id="btn-fr" type="button" lang="fr">Français</button>
+    <button id="btn-pt-BR" type="button" lang="pt-BR">Português</button>
+  </nav>
+  <section id="doc-en" lang="en">
+<h1>Support</h1>
+<p>
+Apps by <strong>[Developer name]</strong> — Finora Budget · Vitals Flow · Smart Utility Hub.
+</p>
+<h2>Contact</h2>
+<p>
+Questions, bug reports, or feature ideas: <strong>[contact email]</strong>
+</p>
+<p>
+Please include the app name, your iOS version, and what you were doing when the
+<br>
+issue happened. Screenshots help a lot.
+</p>
+<h2>Common questions</h2>
+<p>
+<strong>Where is my data stored?</strong>
+<br>
+On your device. There are no accounts and no developer servers. Finora Budget and
+<br>
+Vitals Flow can optionally sync through your own iCloud (a Pro feature, with a switch in
+<br>
+Settings → iCloud Sync). Smart Utility Hub stays entirely on your device. See the
+<br>
+<a href="PRIVACY_POLICY.md">Privacy Policy</a>.
+</p>
+<p>
+<strong>How do I back up my data?</strong>
+<br>
+Each app has Settings → Backup, which exports a file you own. Restore it from the
+<br>
+same screen on any device.
+</p>
+<p>
+<strong>How do the AI features work?</strong>
+<br>
+They're optional and use your own OpenAI or Anthropic API key (added in Settings).
+<br>
+No key, no data leaves your device.
+</p>
+<p>
+<strong>How do I restore a Pro purchase?</strong>
+<br>
+Settings → the Pro/Unlock row → Restore Purchases, signed in with the Apple
+<br>
+Account that bought it. Pro is a one-time purchase with Family Sharing enabled.
+</p>
+  </section>
+  <section id="doc-es" lang="es" hidden>
+<h1>Soporte</h1>
+<p>
+Apps de <strong>[Developer name]</strong> — Finora Budget · Vitals Flow · Smart Utility Hub.
+</p>
+<h2>Contacto</h2>
+<p>
+Preguntas, informes de errores o ideas para nuevas funciones: <strong>[contact email]</strong>
+</p>
+<p>
+Por favor, incluye el nombre de la app, tu versión de iOS y qué estabas haciendo cuando
+<br>
+ocurrió el problema. Las capturas de pantalla ayudan mucho.
+</p>
+<h2>Preguntas frecuentes</h2>
+<p>
+<strong>¿Dónde se almacenan mis datos?</strong>
+<br>
+En tu dispositivo. No hay cuentas ni servidores del desarrollador. Finora Budget y Vitals
+<br>
+Flow pueden sincronizar opcionalmente a través de tu propio iCloud (una función Pro, con un
+<br>
+interruptor en Ajustes → Sincronización con iCloud). Smart Utility Hub permanece por completo
+<br>
+en tu dispositivo. Consulta la
+<br>
+<a href="PRIVACY_POLICY.es.md">Política de Privacidad</a>.
+</p>
+<p>
+<strong>¿Cómo hago una copia de seguridad de mis datos?</strong>
+<br>
+Cada app tiene Ajustes → Copia de seguridad, que exporta un archivo que es tuyo. Restáuralo
+<br>
+desde la misma pantalla en cualquier dispositivo.
+</p>
+<p>
+<strong>¿Cómo funcionan las funciones de IA?</strong>
+<br>
+Son opcionales y usan tu propia clave de API de OpenAI o Anthropic (añadida en Ajustes). Sin
+<br>
+clave, ningún dato sale de tu dispositivo.
+</p>
+<p>
+<strong>¿Cómo restauro una compra Pro?</strong>
+<br>
+Ajustes → la fila Pro/Desbloquear → Restaurar compras, con la sesión iniciada con la Apple
+<br>
+Account que la compró. Pro es una compra única con Compartir en Familia habilitado.
+</p>
+  </section>
+  <section id="doc-de" lang="de" hidden>
+<h1>Support</h1>
+<p>
+Apps von <strong>[Developer name]</strong> — Finora Budget · Vitals Flow · Smart Utility Hub.
+</p>
+<h2>Kontakt</h2>
+<p>
+Fragen, Fehlerberichte oder Ideen: <strong>[contact email]</strong>
+</p>
+<p>
+Bitte nenne die App, deine iOS-Version und was du gerade gemacht hast, als das Problem
+<br>
+auftrat. Screenshots helfen sehr.
+</p>
+<h2>Häufige Fragen</h2>
+<p>
+<strong>Wo werden meine Daten gespeichert?</strong>
+<br>
+Auf deinem Gerät. Es gibt keine Konten und keine Server von uns. Finora Budget und Vitals
+<br>
+Flow können optional über deine eigene iCloud synchronisieren (eine Pro-Funktion, mit einem
+<br>
+Schalter unter Einstellungen → iCloud-Sync). Smart Utility Hub bleibt vollständig auf deinem
+<br>
+Gerät. Siehe die <a href="PRIVACY_POLICY.de.md">Datenschutzerklärung</a>.
+</p>
+<p>
+<strong>Wie sichere ich meine Daten?</strong>
+<br>
+Jede App hat Einstellungen → Backup und exportiert eine Datei, die dir gehört. Über denselben
+<br>
+Bildschirm kannst du sie auf jedem Gerät wiederherstellen.
+</p>
+<p>
+<strong>Wie funktionieren die KI-Funktionen?</strong>
+<br>
+Sie sind optional und nutzen deinen eigenen OpenAI- oder Anthropic-API-Schlüssel (in den
+<br>
+Einstellungen hinterlegt). Ohne Schlüssel verlassen keine Daten dein Gerät.
+</p>
+<p>
+<strong>Wie stelle ich einen Pro-Kauf wieder her?</strong>
+<br>
+Einstellungen → die Zeile „Pro/Freischalten" → Käufe wiederherstellen, angemeldet mit dem
+<br>
+Apple-Account, mit dem du gekauft hast. Pro ist ein einmaliger Kauf mit aktivierter
+<br>
+Familienfreigabe.
+</p>
+  </section>
+  <section id="doc-fr" lang="fr" hidden>
+<h1>Assistance</h1>
+<p>
+Apps de <strong>[Developer name]</strong> — Finora Budget · Vitals Flow · Smart Utility Hub.
+</p>
+<h2>Contact</h2>
+<p>
+Questions, rapports de bug ou idées : <strong>[contact email]</strong>
+</p>
+<p>
+Merci d'indiquer le nom de l'app, votre version d'iOS et ce que vous faisiez au moment du
+<br>
+problème. Les captures d'écran aident beaucoup.
+</p>
+<h2>Questions fréquentes</h2>
+<p>
+<strong>Où sont stockées mes données ?</strong>
+<br>
+Sur votre appareil. Il n'y a ni comptes ni serveurs nous appartenant. Finora Budget et Vitals
+<br>
+Flow peuvent, si vous le souhaitez, se synchroniser via votre propre iCloud (une
+<br>
+fonctionnalité Pro, avec un interrupteur dans Réglages → Synchronisation iCloud). Smart
+<br>
+Utility Hub reste entièrement sur votre appareil. Voir la [Politique de
+<br>
+confidentialité](PRIVACY_POLICY.fr.md).
+</p>
+<p>
+<strong>Comment sauvegarder mes données ?</strong>
+<br>
+Chaque app propose Réglages → Sauvegarde, qui exporte un fichier qui vous appartient.
+<br>
+Restaurez-le depuis le même écran sur n'importe quel appareil.
+</p>
+<p>
+<strong>Comment fonctionnent les fonctionnalités IA ?</strong>
+<br>
+Elles sont facultatives et utilisent votre propre clé d'API OpenAI ou Anthropic (ajoutée dans
+<br>
+les Réglages). Sans clé, aucune donnée ne quitte votre appareil.
+</p>
+<p>
+<strong>Comment restaurer un achat Pro ?</strong>
+<br>
+Réglages → la ligne Pro/Déverrouiller → Restaurer les achats, connecté avec le compte Apple
+<br>
+qui a effectué l'achat. Pro est un achat unique, avec le partage familial activé.
+</p>
+  </section>
+  <section id="doc-pt-BR" lang="pt-BR" hidden>
+<h1>Suporte</h1>
+<p>
+Apps de <strong>[Developer name]</strong> — Finora Budget · Vitals Flow · Smart Utility Hub.
+</p>
+<h2>Contato</h2>
+<p>
+Dúvidas, relatos de bugs ou ideias: <strong>[contact email]</strong>
+</p>
+<p>
+Por favor, informe o nome do app, a sua versão do iOS e o que você estava fazendo quando o
+<br>
+problema aconteceu. Capturas de tela ajudam muito.
+</p>
+<h2>Perguntas frequentes</h2>
+<p>
+<strong>Onde os meus dados ficam guardados?</strong>
+<br>
+No seu aparelho. Não há contas nem servidores nossos. O Finora Budget e o Vitals Flow podem,
+<br>
+se você quiser, sincronizar pelo seu próprio iCloud (um recurso Pro, com uma chave em Ajustes
+<br>
+→ Sincronização com o iCloud). O Smart Utility Hub fica inteiramente no seu aparelho. Veja a
+<br>
+<a href="PRIVACY_POLICY.pt-BR.md">Política de Privacidade</a>.
+</p>
+<p>
+<strong>Como faço backup dos meus dados?</strong>
+<br>
+Cada app tem Ajustes → Backup, que exporta um arquivo que é seu. Restaure pelo mesmo lugar em
+<br>
+qualquer aparelho.
+</p>
+<p>
+<strong>Como funcionam os recursos de IA?</strong>
+<br>
+São opcionais e usam a sua própria chave de API da OpenAI ou da Anthropic (adicionada nos
+<br>
+Ajustes). Sem chave, nenhum dado sai do seu aparelho.
+</p>
+<p>
+<strong>Como restauro uma compra Pro?</strong>
+<br>
+Ajustes → a linha Pro/Desbloquear → Restaurar Compras, conectado com a Conta Apple que fez a
+<br>
+compra. O Pro é uma compra única, com Compartilhamento Familiar ativado.
+</p>
+  </section>
+  <footer>Generated from the PersonalSuite repository. The English version is authoritative.</footer>
+</main>
+<script>
+  (function () {
+    var codes = ["en", "es", "de", "fr", "pt-BR"];
+    var sections = {}, buttons = {};
+    codes.forEach(function (c) {
+      sections[c] = document.getElementById('doc-' + c);
+      buttons[c] = document.getElementById('btn-' + c);
+    });
+    function show(code, push) {
+      if (!sections[code]) code = 'en';
+      codes.forEach(function (c) {
+        sections[c].hidden = (c !== code);
+        buttons[c].setAttribute('aria-current', String(c === code));
+      });
+      document.documentElement.lang = code;
+      if (push) history.replaceState(null, '', '?lang=' + code);
+    }
+    function initial() {
+      // An explicit URL wins — App Store Connect points at one URL per locale.
+      var q = new URLSearchParams(location.search).get('lang');
+      var h = location.hash.replace('#', '');
+      var want = q || h;
+      if (want) {
+        if (sections[want]) return want;
+        var base = want.split('-')[0];
+        var hit = codes.filter(function (c) { return c.split('-')[0] === base; })[0];
+        if (hit) return hit;
+      }
+      // Otherwise follow the browser, matching the base language (pt → pt-BR).
+      var prefs = navigator.languages || [navigator.language || 'en'];
+      for (var i = 0; i < prefs.length; i++) {
+        var p = prefs[i];
+        if (sections[p]) return p;
+        var b = p.split('-')[0];
+        var m = codes.filter(function (c) { return c.split('-')[0] === b; })[0];
+        if (m) return m;
+      }
+      return 'en';
+    }
+    codes.forEach(function (c) {
+      buttons[c].addEventListener('click', function () { show(c, true); });
+    });
+    show(initial(), false);
+  })();
+</script>
+</body>
+</html>
