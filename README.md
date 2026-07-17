@@ -22,6 +22,6 @@ the PersonalSuite repository:
 python3 Scripts/build_pages.py support <path-to-this-repo>
 ```
 
-The build redacts the contact email to `[contact email]` and refuses to write a file that
+The build redacts the contact email to `panosvigasdev@gmail.com` and refuses to write a file that
 still contains it — this repo is public and its history is permanent, so that field is filled
 in on the live page by hand.
